@@ -1,0 +1,29 @@
+{
+  "name": "dummy-backend-01",
+  "version": "0.0.1",
+  "description": "Dummy backend application for frontend test.",
+  "author": "Md. Shahadul Alam Patwary",
+  "main": "src/application.js",
+  "scripts": {
+    "start": "nodemon --ignore states.json ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eatl-shahadul-01/dummy-backend-01.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eatl-shahadul-01/dummy-backend-01/issues"
+  },
+  "homepage": "https://github.com/eatl-shahadul-01/dummy-backend-01#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "@shahadul-17/random-generator": "0.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "express-fileupload": "^1.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "winston": "^3.4.0"
+  }
+}

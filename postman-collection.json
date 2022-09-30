@@ -1,0 +1,658 @@
+{
+	"info": {
+		"_postman_id": "c7e0f052-4d9c-4dae-9529-87c2613a805e",
+		"name": "Dummy Backend 01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-non-expiring",
+								"value": "{{isNonExpiring}}",
+								"type": "default"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"hong\",\n    \"password\": \"0a1GggW2G33\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/users/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-non-expiring",
+								"value": "{{isNonExpiring}}",
+								"type": "default"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"alexander20\",\n    \"email\": \"alexander20.greeho@gmail.com\",\n    \"mobile\": \"+8801791652153\",\n    \"maritalStatus\": \"unmarried\",\n    \"password\": \"12345678\",\n    \"confirmPassword\": \"12345678\",\n    \"address\": \"New York City\",\n    \"university\": \"Oxford University\",\n    \"weight\": 81,\n    \"height\": 6.2\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/users/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Admin",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/users/admin",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Self",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{accessToken}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/users/self",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"self"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Self",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "bearer {{accessToken}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"shahadul.greeho@gmail.com\",\n    \"mobile\": \"+8801784652153\",\n    \"maritalStatus\": \"unmarried\",\n    \"address\": \"Dhaka\",\n    \"university\": \"North South University\",\n    \"weight\": 96,\n    \"height\": 6,\n    \"profilePicture\": \"V27u782jUaoJ5oJDB2E8XZ4pDCa7pu6N99RCS422nq30ra5oYXp4H7hvMUXu.png\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/users/self",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"self"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "bearer {{accessToken}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"shahadul.greeho@gmail.com\",\n    \"mobile\": \"+8801784652153\",\n    \"maritalStatus\": \"unmarried\",\n    \"address\": \"Dhaka\",\n    \"university\": \"North South University\",\n    \"weight\": 96,\n    \"height\": 6\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/users/9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/users?query=north&limit=10&offset=5&currentPage=1&sortBy=userId&orderBy=desc",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "north"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "5"
+								},
+								{
+									"key": "currentPage",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "userId"
+								},
+								{
+									"key": "orderBy",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by User ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/users/2711",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"2711"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ping",
+			"item": [
+				{
+					"name": "Ping",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"type": "text",
+								"value": "{{apiKey}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/ping",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"ping"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Key",
+			"item": [
+				{
+					"name": "Get API Key",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-super-user-api-key",
+								"type": "text",
+								"value": "{{superUserApiKey}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/apiKey",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"apiKey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Regenerate API Key",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-super-user-api-key",
+								"type": "text",
+								"value": "{{superUserApiKey}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"apiKey\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/apiKey",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"apiKey"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Graph Vertex",
+			"item": [
+				{
+					"name": "Get Graph Vertices",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "bearer {{accessToken}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/graphVertices",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"graphVertices"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Renew Tokens",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "bearer {{accessToken}}"
+							},
+							{
+								"key": "Authorization-Refresh",
+								"value": "bearer {{refreshToken}}",
+								"type": "default"
+							},
+							{
+								"key": "x-non-expiring",
+								"value": "{{isNonExpiring}}",
+								"type": "default"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"shahadul.greeho@gmail.com\",\n    \"mobile\": \"+8801784652153\",\n    \"maritalStatus\": \"unmarried\",\n    \"address\": \"Dhaka\",\n    \"university\": \"North South University\",\n    \"weight\": 96,\n    \"height\": 6\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/tokens/renew",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"tokens",
+								"renew"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "Get File",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/files/dmg50s18UVXy9EzqLAFP2VY9b7HauXVewW1TU59Lr8x2CM2XQxVD3H1v60VK.png",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"files",
+								"dmg50s18UVXy9EzqLAFP2VY9b7HauXVewW1TU59Lr8x2CM2XQxVD3H1v60VK.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload File",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{accessToken}}",
+								"type": "default"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/Users/Shahadul Alam/Pictures/Screenshots/2.PNG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/files",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"files"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update File",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{accessToken}}",
+								"type": "default"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/Users/Shahadul Alam/Pictures/Screenshots/TJ_Update.PNG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/files/dmg50s18UVXy9EzqLAFP2VY9b7HauXVewW1TU59Lr8x2CM2XQxVD3H1v60VK.png",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"files",
+								"dmg50s18UVXy9EzqLAFP2VY9b7HauXVewW1TU59Lr8x2CM2XQxVD3H1v60VK.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete File",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{accessToken}}",
+								"type": "default"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/files/dmg50s18UVXy9EzqLAFP2VY9b7HauXVewW1TU59Lr8x2CM2XQxVD3H1v60VK.png",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"files",
+								"dmg50s18UVXy9EzqLAFP2VY9b7HauXVewW1TU59Lr8x2CM2XQxVD3H1v60VK.png"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://exam.greeho.com"
+		},
+		{
+			"key": "accessToken",
+			"value": ""
+		},
+		{
+			"key": "refreshToken",
+			"value": ""
+		},
+		{
+			"key": "isNonExpiring",
+			"value": "false"
+		},
+		{
+			"key": "superUserApiKey",
+			"value": ""
+		},
+		{
+			"key": "apiKey",
+			"value": ""
+		}
+	]
+}
